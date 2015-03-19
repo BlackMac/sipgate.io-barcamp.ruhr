@@ -1,8 +1,8 @@
 # sipgate.io-barcamp.ruhr
 
-## requirements
-
 this is a very simple example of how to use sipgate.io with [meteor](https://www.meteor.com/)
+
+## requirements
 
 ### remote access
 
