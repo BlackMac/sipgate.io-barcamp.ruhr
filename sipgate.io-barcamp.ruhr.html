@@ -3,12 +3,13 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <h1>Welcome to sipgate.io!</h1>
 
-  {{> hello}}
+  {{> iocall}}
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="iocall">
+  {{#if currentCall}}
+  <p>Anruf von {{currentCall.from}} an {{currentCall.to}}.</p>
+  {{/if}}
 </template>
