@@ -1,6 +1,6 @@
 # sipgate.io-barcamp.ruhr
 
-this is a very simple example of how to use sipgate.io with [meteor](https://www.meteor.com/)
+this is a very simple example of how to use [sipgate.io](http://sipgate.io) with [meteor](https://www.meteor.com/)
 
 ## requirements
 
