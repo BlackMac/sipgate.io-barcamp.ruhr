@@ -10,6 +10,12 @@ You need a way to expose your local machine to the public internet. You can also
 
     sudo gem install proxylocal
 
+to expose your local meteor instance use
+
+    proxylocal 3000
+
+copy the URL given by proxylocal into both (incoming and outgoing) sipgate.io URL fields and add "/io"
+
 ### router
 
 To be able to respond differently to another URL you will need a router. A very simpe solution for meteor is the [cfs:http-methods package](https://github.com/CollectionFS/Meteor-http-methods).
