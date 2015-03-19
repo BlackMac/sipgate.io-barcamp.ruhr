@@ -8,3 +8,5 @@ meteor-platform
 autopublish
 insecure
 cfs:http-methods
+nemo64:bootstrap
+less

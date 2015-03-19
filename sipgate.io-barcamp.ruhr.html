@@ -1,27 +1,71 @@
 <head>
   <title>sipgate.io-barcamp.ruhr</title>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-  <h1>Welcome to sipgate.io!</h1>
+  <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Welcome to sipgate.io!</a>
+        </div>
+      </div>
+    </nav>
 
-  {{> ioconfig}}
-  {{> iocall}}
+    <div class="container">
+      <div class="iodemo">
+        <div class="row">
+          <div class="col-sm-8">
+            {{> iocall}}
+          </div>
+          <div class="col-sm-4">
+            {{> ioconfig}}
+          </div>
+        </div>
+      </div>
+    </div>
 </body>
 
 <template name="ioconfig">
-  <div class="config">
-    Alle Anrufe
-    <select id="incoming_handling">
-      <option value="allow" {{allowSelected}}>zulassen</option>
-      <option value="deny" {{denySelected}}>ablehnen</option>
-      <option value="busy" {{busySelected}}>besetzt</option>
-    </select>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Einstellungen</h3>
+    </div>
+    <div class="panel-body">
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label class="col-sm-4 control-label">Alle Anrufe</label>
+          <div class="col-sm-8">
+            <select id="incoming_handling" class="form-control">
+              <option value="allow" {{allowSelected}}>zulassen</option>
+              <option value="deny" {{denySelected}}>ablehnen</option>
+              <option value="busy" {{busySelected}}>besetzt</option>
+            </select>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
 </template>
 
 <template name="iocall">
-  {{#if currentCall}}
-  <div class="call">Der letzte Anruf war ein <strong>{{directionDescription}}</strong> Anruf von <strong>{{from}}</strong> auf <strong>{{to}}</strong>.</div>
-  {{/if}}
+
+
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h3 class="panel-title">Anrufinformationen</h3>
+    </div>
+
+    <div class="panel-body">
+      {{#if currentCall}}
+        Der letzte Anruf war ein <strong>{{directionDescription}}</strong> Anruf von <strong>{{from}}</strong> auf <strong>{{to}}</strong>.
+      {{else}}
+        Bisher gab es keinen Anruf
+      {{/if}}
+    </div>
+  </div>
+
 </template>
