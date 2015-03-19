@@ -7,6 +7,14 @@ if (Meteor.isClient) {
   Template.iocall.helpers({
     currentCall: function () {
       return calls.findOne();
+    },
+    from: function () {
+      var call = calls.findOne();
+      return formatNumber(call.from);
+    },
+    to: function () {
+      var call = calls.findOne();
+      return formatNumber(call.to);
     }
   });
 }
