@@ -15,6 +15,13 @@ if (Meteor.isClient) {
     to: function () {
       var call = calls.findOne();
       return formatNumber(call.to);
+    },
+    directionDescription: function () {
+      var call = calls.findOne();
+      if (call.direction === "in") {
+        return "eingehender";
+      }
+      return "ausgehender";
     }
   });
 }
