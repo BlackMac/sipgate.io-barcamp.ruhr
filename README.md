@@ -2,6 +2,8 @@
 
 ## requirements
 
+this is a very simple example of how to use sipgate.io with [meteor](https://www.meteor.com/)
+
 ### remote access
 
 You need a way to expose your local machine to the public internet. You can also do this using port forwarding or an ssh reverse proxy. proxylocal is pretty much the easiest way though.
