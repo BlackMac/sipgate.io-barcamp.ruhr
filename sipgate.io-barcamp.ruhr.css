@@ -3,10 +3,19 @@ body {
   font-family: Helvetica Neue, Helvetica, Arial, Sans-Serif;
 }
 
-div.call {
+div {
   border:1px solid #cccccc;
-  background-color: #eeeeee;
   border-radius:4px;
   padding:5px;
+}
+
+
+div.call {
+  background-color: #eeeeee;
   text-align:center;
+}
+
+div.config {
+  background-color: #ffeeee;
+  margin-bottom:5px;
 }

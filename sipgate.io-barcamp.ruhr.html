@@ -5,8 +5,20 @@
 <body>
   <h1>Welcome to sipgate.io!</h1>
 
+  {{> ioconfig}}
   {{> iocall}}
 </body>
+
+<template name="ioconfig">
+  <div class="config">
+    Eingehende Anrufe
+    <select id="incoming_handling">
+      <option value="allow" {{allowSelected}}>zulassen</option>
+      <option value="deny" {{denySelected}}>ablehnen</option>
+      <option value="busy" {{busySelected}}>besetzt</option>
+    </select>
+  </div>
+</template>
 
 <template name="iocall">
   {{#if currentCall}}
