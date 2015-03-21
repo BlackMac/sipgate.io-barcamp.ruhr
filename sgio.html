@@ -1,0 +1,21 @@
+<head>
+  <title>sgio</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> callsList}}
+</body>
+
+<template name="callsList">
+  <ul>
+    {{#each calls}}
+      {{> callDisplay}}
+    {{/each}}
+  </ul>
+</template>
+
+<template name="callDisplay">
+  <p>Anruf von {{from}} an {{to}}.</p>
+</template>
